@@ -1,0 +1,5 @@
+name: "TownyUpgrades"
+version: "1"
+author: "Kalob Porter (PorterK)"
+main: "net.kalob.towny.upgrades.Main"
+api-version: "1.14.3"
