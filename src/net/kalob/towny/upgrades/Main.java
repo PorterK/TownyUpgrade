@@ -32,6 +32,7 @@ public class Main extends JavaPlugin {
 
         pm.registerEvents(new SmeltingEventListener(this), this);
         pm.registerEvents(new PlayerEventListener(this), this);
+        pm.registerEvents(new MobEventListener(this), this);
 
     }
 
