@@ -13,30 +13,6 @@ public class PlayerEventListener implements Listener {
     public PlayerEventListener (Main plugin) { this.plugin = plugin; }
 
     @EventHandler
-    public void onPlayerMoveEvent(PlayerMoveEvent e) {
-        Boolean hasPermission = TownyConnector.MayorHasPermission(plugin, e.getTo().getBlock(), plugin.FLYING);
-        Boolean hasFlyPermission = e.getPlayer().hasPermission("simplefly.fly");
-
-        // If the user has the ability the fly anyways we aren't going to pop them into or out of fly mode
-        if (hasFlyPermission) return;
-
-        if (hasPermission) {
-            e.getPlayer().setAllowFlight(true);
-
-            String message = String.format("%s Fly mode enabled.", plugin.tag);
-
-            e.getPlayer().sendMessage(message);
-        } else {
-            e.getPlayer().setAllowFlight(false);
-
-            String message = String.format("%s Fly mode disabled.", plugin.tag);
-
-            e.getPlayer().sendMessage(message);
-        }
-
-    }
-
-    @EventHandler
     public void onPlayerDamage(EntityDamageEvent e) {
         Player player;
 

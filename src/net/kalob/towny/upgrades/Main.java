@@ -11,13 +11,12 @@ public class Main extends JavaPlugin {
     FileConfiguration config = getConfig();
     String SMELTING_SPEED_PATH;
     String SMELTING_EFFICIENCY_PATH;
-    String FLYING;
     String MOB_SPAWN_RATE;
     String MOB_EXP;
     String MOB_DROPS;
     String BLAST_RESISTANCE;
-    String tag;
 
+    private String tag;
     private PluginManager pm = getServer().getPluginManager();
 
     @Override
@@ -40,13 +39,13 @@ public class Main extends JavaPlugin {
      *
      * Handles building all of the default config options.
      *
+     * Note: these config paths are also the permission nodes (since they are not complex)
      */
     private void buildConfig() {
         config.options().header("Towny Upgrades Config");
 
         SMELTING_SPEED_PATH = buildPath("smelting.speed");
         SMELTING_EFFICIENCY_PATH = buildPath("smelting.efficiency");
-        FLYING = buildPath("fly.enabled");
         MOB_SPAWN_RATE = buildPath("mobs.spawn_rate");
         MOB_EXP = buildPath("mobs.exp_mod");
         MOB_DROPS = buildPath("mobs.drop_mod");
@@ -54,7 +53,6 @@ public class Main extends JavaPlugin {
 
         config.addDefault(SMELTING_SPEED_PATH, "2");
         config.addDefault(SMELTING_EFFICIENCY_PATH, "2");
-        config.addDefault(FLYING, "true");
         config.addDefault(MOB_SPAWN_RATE, "1.5");
         config.addDefault(MOB_EXP, "2");
         config.addDefault(MOB_DROPS, "2");
