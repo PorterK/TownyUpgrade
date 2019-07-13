@@ -55,7 +55,7 @@ public class Main extends JavaPlugin {
         config.addDefault(SMELTING_EFFICIENCY_PATH, "2");
         config.addDefault(MOB_SPAWN_RATE, "1.5");
         config.addDefault(MOB_EXP, "2");
-        config.addDefault(MOB_DROPS, "2");
+        config.addDefault(MOB_DROPS, "true");
         config.addDefault(BLAST_RESISTANCE, "true");
 
         config.options().copyDefaults(true);

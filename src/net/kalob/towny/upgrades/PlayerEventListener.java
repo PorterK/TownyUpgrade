@@ -10,7 +10,7 @@ import org.bukkit.event.player.PlayerMoveEvent;
 public class PlayerEventListener implements Listener {
     private Main plugin;
 
-    public PlayerEventListener (Main plugin) { this.plugin = plugin; }
+    PlayerEventListener (Main plugin) { this.plugin = plugin; }
 
     @EventHandler
     public void onPlayerDamage(EntityDamageEvent e) {
@@ -25,8 +25,9 @@ public class PlayerEventListener implements Listener {
         Block block = player.getLocation().getBlock();
 
         Boolean hasBlastResistance = TownyConnector.MayorHasPermission(plugin, block, plugin.BLAST_RESISTANCE);
+        Boolean blastResistanceEnabled = Boolean.parseBoolean(plugin.config.get(plugin.BLAST_RESISTANCE).toString());
 
-        if (hasBlastResistance) {
+        if (blastResistanceEnabled && hasBlastResistance) {
             if (e.getCause() == EntityDamageEvent.DamageCause.ENTITY_EXPLOSION) {
                 double blastResistanceMod = (double) plugin.config.get(plugin.BLAST_RESISTANCE);
 

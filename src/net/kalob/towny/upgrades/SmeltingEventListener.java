@@ -8,9 +8,7 @@ import org.bukkit.event.inventory.FurnaceSmeltEvent;
 public class SmeltingEventListener implements Listener {
     private Main plugin;
 
-    public SmeltingEventListener(Main plugin) {
-        this.plugin = plugin;
-    }
+    SmeltingEventListener(Main plugin) { this.plugin = plugin; }
 
     /**
      *

@@ -7,8 +7,8 @@ import com.palmergames.bukkit.towny.object.TownyWorld;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 
-public class TownyConnector {
-    public static Boolean MayorHasPermission(Main plugin, Block block, String permission) {
+class TownyConnector {
+     static Boolean MayorHasPermission(Main plugin, Block block, String permission) {
         int x = block.getX();
         int z = block.getZ();
         TownyWorld world = new TownyWorld(block.getWorld().getName());
@@ -26,10 +26,6 @@ public class TownyConnector {
 
         mayor = plugin.getServer().getPlayer(town.getMayor().getName());
 
-        if (mayor.hasPermission(permission)) {
-            return true;
-        }
-
-        return false;
+        return mayor.hasPermission(permission);
     }
 }

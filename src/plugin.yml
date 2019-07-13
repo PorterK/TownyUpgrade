@@ -3,3 +3,22 @@ version: "1"
 author: "Kalob Porter (PorterK)"
 main: "net.kalob.towny.upgrades.Main"
 api-version: "1.14.3"
+permissions:
+  towny-upgrades.smelting.speed:
+    description: Upgraded smelting speed for towny residents.
+    default: op
+  towny-upgrades.smelting.efficiency:
+    description: Upgraded smelting efficiency for towny residents.
+    default: op
+  towny-upgrades.mobs.spawn_rate:
+    description: Upgraded spawn rates from spawners in town tiles.
+    default: op
+  towny-upgrades.mobs.exp_mod:
+    description: Upgraded exp drops from mobs in town.
+    default: op
+  towny-upgrades.mobs.drop_mod:
+    description: 150% drop rates from mobs in town.
+    default: op
+  towny-upgrades.player.blast_resistance:
+    description: Blast resistance for players of town.
+    default: op

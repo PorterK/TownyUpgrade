@@ -6,11 +6,15 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.entity.SpawnerSpawnEvent;
+import org.bukkit.inventory.ItemStack;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MobEventListener implements Listener {
     private Main plugin;
 
-    public MobEventListener(Main plugin) { this.plugin = plugin; }
+    MobEventListener(Main plugin) { this.plugin = plugin; }
 
     @EventHandler
     public void onSpawnerSpawn(SpawnerSpawnEvent e) {
@@ -37,6 +41,22 @@ public class MobEventListener implements Listener {
 
         if (hasExpBoost) {
             e.setDroppedExp(droppedExp);
+        }
+
+        // For 150% drops there is a 50% chance of a double drop
+        boolean hasDoubleDrop = Math.random() > 0.5;
+        boolean dropRateEnabled = Boolean.parseBoolean(plugin.config.get(plugin.MOB_DROPS).toString());
+
+        if (hasDoubleDrop) {
+            List<ItemStack> drops = e.getDrops();
+
+            List<ItemStack> extraDrops = new ArrayList<>();
+
+            for (int i = 0; i < drops.size() - 1; i++) {
+                extraDrops.add(drops.get(i));
+            }
+
+            drops.addAll(extraDrops);
         }
     }
 }
