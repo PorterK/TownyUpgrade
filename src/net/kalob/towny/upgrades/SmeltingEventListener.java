@@ -4,6 +4,7 @@ import org.bukkit.block.Furnace;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.FurnaceSmeltEvent;
+import org.bukkit.scheduler.BukkitRunnable;
 
 public class SmeltingEventListener implements Listener {
     private Main plugin;
@@ -25,10 +26,13 @@ public class SmeltingEventListener implements Listener {
         Boolean hasSpeedBoost = TownyConnector.MayorHasPermission(plugin, e.getBlock(), plugin.SMELTING_SPEED_PATH);
         Boolean hasEfficiencyBoost = TownyConnector.MayorHasPermission(plugin, e.getBlock(), plugin.SMELTING_EFFICIENCY_PATH);
 
-        int cookTimeMod = (int) plugin.config.get(plugin.SMELTING_SPEED_PATH);
-        int burnTimeMod = (int) plugin.config.get(plugin.SMELTING_EFFICIENCY_PATH);
+        int cookTimeMod = Integer.parseInt(plugin.config.get(plugin.SMELTING_SPEED_PATH).toString());
+        int burnTimeMod = Integer.parseInt(plugin.config.get(plugin.SMELTING_EFFICIENCY_PATH).toString());
 
-        int cookTime = furnace.getCookTime() * cookTimeMod;
+        // We want cook time to be shorter...
+        int cookTime = furnace.getCookTime() / cookTimeMod;
+
+        // But we want burn time to be longer
         int burnTime = furnace.getBurnTime() * burnTimeMod;
 
         if (hasSpeedBoost) {
@@ -38,6 +42,7 @@ public class SmeltingEventListener implements Listener {
         if (hasEfficiencyBoost) {
             furnace.setBurnTime((short) burnTime);
         }
-    }
 
+        furnace.update();
+    }
 }

@@ -1,11 +1,15 @@
 package net.kalob.towny.upgrades;
 
+import com.palmergames.bukkit.towny.Towny;
 import com.palmergames.bukkit.towny.exceptions.NotRegisteredException;
 import com.palmergames.bukkit.towny.object.Town;
 import com.palmergames.bukkit.towny.object.TownBlock;
 import com.palmergames.bukkit.towny.object.TownyWorld;
+import com.palmergames.bukkit.towny.object.WorldCoord;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
+
+import java.util.logging.Level;
 
 class TownyConnector {
      static Boolean MayorHasPermission(Main plugin, Block block, String permission) {
@@ -19,7 +23,7 @@ class TownyConnector {
         Player mayor;
 
         try {
-            town = townBlock.getTown();
+            town = WorldCoord.parseWorldCoord(block).getTownBlock().getTown();
         } catch (NotRegisteredException e) {
             return false;
         }

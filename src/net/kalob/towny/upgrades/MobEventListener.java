@@ -1,5 +1,7 @@
 package net.kalob.towny.upgrades;
 
+import org.bukkit.Location;
+import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.block.CreatureSpawner;
 import org.bukkit.event.EventHandler;
@@ -10,6 +12,7 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
 
 public class MobEventListener implements Listener {
     private Main plugin;
@@ -18,16 +21,20 @@ public class MobEventListener implements Listener {
 
     @EventHandler
     public void onSpawnerSpawn(SpawnerSpawnEvent e) {
-        CreatureSpawner spawner = e.getSpawner();
+        World world = e.getLocation().getWorld();
 
         Boolean hasSpawnerBoost = TownyConnector.MayorHasPermission(plugin, e.getSpawner().getBlock(), plugin.MOB_SPAWN_RATE);
 
-        int spawnRateMod = (int) plugin.config.get(plugin.MOB_SPAWN_RATE);
-
-        int spawnRate = spawner.getSpawnCount() * spawnRateMod;
+        int spawnRateMod = Integer.parseInt(plugin.config.get(plugin.MOB_SPAWN_RATE).toString());
 
         if (hasSpawnerBoost) {
-            spawner.setSpawnCount(spawnRate);
+            for (int i = 1; i <= spawnRateMod - 1; i ++) {
+                try {
+                    world.spawnEntity(e.getLocation(), e.getEntityType());
+                } catch (NullPointerException err) {
+                    plugin.getLogger().log(Level.SEVERE, err.getMessage());
+                }
+            }
         }
     }
 
@@ -36,7 +43,7 @@ public class MobEventListener implements Listener {
         Block block = e.getEntity().getLocation().getBlock();
         Boolean hasExpBoost = TownyConnector.MayorHasPermission(plugin, block, plugin.MOB_EXP);
 
-        int expMod = (int) plugin.config.get(plugin.MOB_EXP);
+        int expMod = Integer.parseInt(plugin.config.get(plugin.MOB_EXP).toString());
         int droppedExp = e.getDroppedExp() * expMod;
 
         if (hasExpBoost) {
@@ -47,7 +54,7 @@ public class MobEventListener implements Listener {
         boolean hasDoubleDrop = Math.random() > 0.5;
         boolean dropRateEnabled = Boolean.parseBoolean(plugin.config.get(plugin.MOB_DROPS).toString());
 
-        if (hasDoubleDrop) {
+        if (dropRateEnabled && hasDoubleDrop) {
             List<ItemStack> drops = e.getDrops();
 
             List<ItemStack> extraDrops = new ArrayList<>();

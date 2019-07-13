@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="towny-upgrades" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2e6611c9-7c87-4c16-8a72-c1856371af99" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/towny_upgrades.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/net/kalob/towny/upgrades/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/kalob/towny/upgrades/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/net/kalob/towny/upgrades/MobEventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/kalob/towny/upgrades/MobEventListener.java" afterDir="false" />
@@ -27,20 +34,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/net/kalob/towny/upgrades/SmeltingEventListener.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/net/kalob/towny/upgrades/MobEventListener.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="16" column="59" lean-forward="true" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
+                <state relative-caret-position="289">
+                  <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -49,10 +44,22 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/net/kalob/towny/upgrades/MobEventListener.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="524">
+                  <caret line="34" column="62" lean-forward="true" selection-start-line="34" selection-start-column="62" selection-end-line="34" selection-end-column="62" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/net/kalob/towny/upgrades/PlayerEventListener.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
-                  <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+                <state relative-caret-position="289">
+                  <caret line="17" column="46" lean-forward="true" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -63,8 +70,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/net/kalob/towny/upgrades/TownyConnector.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="527">
-                  <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+                <state relative-caret-position="476">
+                  <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -75,8 +82,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/plugin.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+                <state relative-caret-position="391">
+                  <caret line="23" column="15" lean-forward="true" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
                 </state>
               </provider>
             </entry>
@@ -89,7 +96,7 @@
             <entry file="file://$PROJECT_DIR$/src/net/kalob/towny/upgrades/SmeltingEventListener.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="102">
-                  <caret line="9" selection-start-line="9" selection-end-line="9" />
+                  <caret line="10" selection-start-line="10" selection-end-line="10" />
                 </state>
               </provider>
             </entry>
@@ -97,8 +104,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/net/kalob/towny/upgrades/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="612">
-                  <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+                <state relative-caret-position="623">
+                  <caret line="57" column="57" lean-forward="true" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -129,12 +136,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/net/kalob/towny/upgrades/SpawnerEventListener.java" />
-        <option value="$PROJECT_DIR$/src/net/kalob/towny/upgrades/Main.java" />
-        <option value="$PROJECT_DIR$/src/net/kalob/towny/upgrades/MobEventListener.java" />
-        <option value="$PROJECT_DIR$/src/net/kalob/towny/upgrades/SmeltingEventListener.java" />
-        <option value="$PROJECT_DIR$/src/net/kalob/towny/upgrades/TownyConnector.java" />
-        <option value="$PROJECT_DIR$/src/plugin.yml" />
         <option value="$PROJECT_DIR$/src/net/kalob/towny/upgrades/PlayerEventListener.java" />
+        <option value="$PROJECT_DIR$/src/plugin.yml" />
+        <option value="$PROJECT_DIR$/src/net/kalob/towny/upgrades/TownyConnector.java" />
+        <option value="$PROJECT_DIR$/src/net/kalob/towny/upgrades/Main.java" />
+        <option value="$PROJECT_DIR$/src/net/kalob/towny/upgrades/SmeltingEventListener.java" />
+        <option value="$PROJECT_DIR$/src/net/kalob/towny/upgrades/MobEventListener.java" />
       </list>
     </option>
   </component>
@@ -160,6 +167,24 @@
             <path>
               <item name="towny-upgrades" type="b2602c69:ProjectViewProjectNode" />
               <item name="towny-upgrades" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="towny-upgrades" type="b2602c69:ProjectViewProjectNode" />
+              <item name="towny-upgrades" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="towny-upgrades" type="b2602c69:ProjectViewProjectNode" />
+              <item name="towny-upgrades" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="towny_upgrades" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="towny-upgrades" type="b2602c69:ProjectViewProjectNode" />
+              <item name="towny-upgrades" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -181,11 +206,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/buildtools/Towny/Towny.jar!/" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/plugin.yml" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -223,6 +248,7 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.32969603" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -279,10 +305,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/kalob/towny/upgrades/SmeltingEventListener.java">
+    <entry file="file://$PROJECT_DIR$/src/plugin.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+        <state relative-caret-position="391">
+          <caret line="23" column="15" lean-forward="true" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/kalob/towny/upgrades/PlayerEventListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="46" lean-forward="true" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Desktop/buildtools/Towny/Towny.jar!/com/palmergames/bukkit/towny/object/TownyUniverse.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="821" column="5" lean-forward="true" selection-start-line="821" selection-start-column="5" selection-end-line="821" selection-end-column="5" />
+          <folding>
+            <element signature="e#28246#28247#0" expanded="true" />
+            <element signature="e#28295#28296#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/kalob/towny/upgrades/TownyConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -291,45 +345,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/kalob/towny/upgrades/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="623">
+          <caret line="57" column="57" lean-forward="true" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/kalob/towny/upgrades/TownyConnector.java">
+    <entry file="file://$PROJECT_DIR$/src/net/kalob/towny/upgrades/SmeltingEventListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="289">
+          <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/plugin.yml">
+    <entry file="jar://$USER_HOME$/Desktop/buildtools/spigot-1.14.3.jar!/org/bukkit/World.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        <state relative-caret-position="419">
+          <caret line="268" column="25" selection-start-line="268" selection-start-column="25" selection-end-line="268" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/kalob/towny/upgrades/MobEventListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="59" lean-forward="true" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/kalob/towny/upgrades/PlayerEventListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        <state relative-caret-position="524">
+          <caret line="34" column="62" lean-forward="true" selection-start-line="34" selection-start-column="62" selection-end-line="34" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -342,10 +386,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>towny-upgrades</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -353,6 +399,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -375,6 +422,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
+          <last-edited>12</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

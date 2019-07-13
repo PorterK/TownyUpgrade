@@ -18,9 +18,12 @@ public class Main extends JavaPlugin {
 
     private String tag;
     private PluginManager pm = getServer().getPluginManager();
+    private static Main plugin;
 
     @Override
     public void onEnable() {
+        plugin = this;
+
         tag = String.format("%s[%sTownyUpgrade%s]%s:", ChatColor.RED, ChatColor.GREEN, ChatColor.RED, ChatColor.WHITE);
 
         getLogger().log(Level.INFO, String.format("%s Towny Upgrades initialized, building config...", tag));
@@ -53,7 +56,7 @@ public class Main extends JavaPlugin {
 
         config.addDefault(SMELTING_SPEED_PATH, "2");
         config.addDefault(SMELTING_EFFICIENCY_PATH, "2");
-        config.addDefault(MOB_SPAWN_RATE, "1.5");
+        config.addDefault(MOB_SPAWN_RATE, "2");
         config.addDefault(MOB_EXP, "2");
         config.addDefault(MOB_DROPS, "true");
         config.addDefault(BLAST_RESISTANCE, "true");
@@ -70,7 +73,7 @@ public class Main extends JavaPlugin {
      * @return Passed path appended to the base path for the config.
      *
      */
-    private String buildPath(@NotNull String path) {
+    private String buildPath(String path) {
         String basePath = "towny-upgrades";
 
         return String.format("%s%s", basePath, path);
@@ -79,5 +82,13 @@ public class Main extends JavaPlugin {
     @Override
     public void onDisable() {
         getLogger().log(Level.INFO, String.format("%s Towny upgrades disabled.", tag));
+    }
+
+    public static Main getInstance() {
+        if (plugin == null) {
+            plugin = new Main();
+        }
+
+        return plugin;
     }
 }
