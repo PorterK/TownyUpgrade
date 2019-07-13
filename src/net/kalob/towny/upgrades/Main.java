@@ -16,7 +16,6 @@ public class Main extends JavaPlugin {
     String MOB_DROPS;
     String BLAST_RESISTANCE;
 
-    private String tag;
     private PluginManager pm = getServer().getPluginManager();
     private static Main plugin;
 
@@ -24,13 +23,11 @@ public class Main extends JavaPlugin {
     public void onEnable() {
         plugin = this;
 
-        tag = String.format("%s[%sTownyUpgrade%s]%s:", ChatColor.RED, ChatColor.GREEN, ChatColor.RED, ChatColor.WHITE);
-
-        getLogger().log(Level.INFO, String.format("%s Towny Upgrades initialized, building config...", tag));
+        getLogger().log(Level.INFO, "Towny Upgrades initialized, building config...");
 
         buildConfig();
 
-        getLogger().log(Level.INFO, String.format("%s Default config built.", tag));
+        getLogger().log(Level.INFO, "Default config built.");
 
         pm.registerEvents(new SmeltingEventListener(this), this);
         pm.registerEvents(new PlayerEventListener(this), this);
@@ -81,7 +78,7 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        getLogger().log(Level.INFO, String.format("%s Towny upgrades disabled.", tag));
+        getLogger().log(Level.INFO, "Towny upgrades disabled.");
     }
 
     public static Main getInstance() {
