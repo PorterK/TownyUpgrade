@@ -24,7 +24,7 @@ public class PlayerEventListener implements Listener {
         Block block = player.getLocation().getBlock();
 
         Boolean hasBlastResistance = TownyConnector.MayorHasPermission(plugin, block, plugin.BLAST_RESISTANCE);
-        Boolean blastResistanceEnabled = Boolean.parseBoolean(plugin.config.get(plugin.BLAST_RESISTANCE).toString());
+        Boolean blastResistanceEnabled = Utils.boolFromConfig(plugin, plugin.BLAST_RESISTANCE);
 
         if (blastResistanceEnabled && hasBlastResistance) {
             if (e.getCause() == EntityDamageEvent.DamageCause.ENTITY_EXPLOSION) {
