@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="spigot-1.14.3">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Desktop/buildtools/spigot-1.14.3.jar!/" />
       <root url="jar://$USER_HOME$/Desktop/buildtools/Towny/Towny.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/buildtools/spigot-1.14.4.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/Desktop/buildtools/spigot-1.14.3.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/buildtools/spigot-1.14.4.jar!/" />
     </SOURCES>
   </library>
 </component>
