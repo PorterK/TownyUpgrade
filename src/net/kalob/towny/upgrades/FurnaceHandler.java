@@ -10,6 +10,7 @@ import org.bukkit.event.inventory.FurnaceBurnEvent;
 import org.bukkit.inventory.*;
 
 import java.util.Iterator;
+import java.util.logging.Level;
 
 /*
     Heavily influenced by:
@@ -17,11 +18,13 @@ import java.util.Iterator;
  */
 
 class FurnaceHandler {
+    private Main plugin;
     private Furnace furnace;
     private int cookTimeMod;
     private int burnTimeMod;
 
     FurnaceHandler(Main plugin, Furnace furnace) {
+        this.plugin = plugin;
         this.furnace = furnace;
 
         Object cookTimeConfig = plugin.config.get(plugin.SMELTING_SPEED_PATH);
@@ -40,14 +43,13 @@ class FurnaceHandler {
         }
     }
 
+    void refreshFurnace(Furnace furnace) { this.furnace = furnace; }
+
     private boolean isFrozen() {
         FurnaceInventory inv = furnace.getInventory();
         CookingRecipe recipe = getFurnaceRecipe(inv);
 
-        if (recipe == null) return true;
-
-        // Already burning or furnace is null
-        if (furnace.getBurnTime() > 0 || furnace == null) {
+        if (recipe == null) {
             return true;
         }
 
@@ -60,16 +62,11 @@ class FurnaceHandler {
             return true;
         }
 
-        if (!recipe.getInputChoice().test(inv.getSmelting())
-            || (inv.getResult() != null
-                && inv.getResult().getType() != Material.AIR)
-            && !recipe.getResult().isSimilar(inv.getResult())
-            || !(recipe instanceof BlastingRecipe)
-                && !(furnace instanceof BlastFurnace)
-            || !(recipe instanceof SmokingRecipe)
-                && !(furnace instanceof Smoker)
-        ) {
-            return true;
+        if ((inv.getResult() != null && inv.getResult().getType() != Material.AIR)
+                ||!(recipe instanceof BlastingRecipe) && !(furnace instanceof BlastFurnace)
+                || !(recipe instanceof SmokingRecipe) && !(furnace instanceof Smoker)) {
+
+            return false;
         }
 
         return false;
@@ -82,14 +79,20 @@ class FurnaceHandler {
 
         if (recipe == null) return;
 
-        furnace.setCookTimeTotal(recipe.getCookingTime() * cookTimeMod);
+        int modifiedCookTime = recipe.getCookingTime() / cookTimeMod;
+
+        if (furnace.getCookTimeTotal() == modifiedCookTime) return;
+
+        furnace.setCookTimeTotal(modifiedCookTime);
         furnace.update();
     }
 
     void setBurnTime(FurnaceBurnEvent e) {
         if (isFrozen()) return;
 
-        e.setBurnTime(e.getBurnTime() * burnTimeMod);
+        int modifiedBurnTime = e.getBurnTime() * burnTimeMod;
+
+        e.setBurnTime(modifiedBurnTime);
     }
 
     /*

@@ -4,6 +4,7 @@ import org.bukkit.block.Furnace;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.FurnaceBurnEvent;
+import org.bukkit.scheduler.BukkitRunnable;
 
 public class SmeltingEventListener implements Listener {
     private Main plugin;
@@ -17,7 +18,7 @@ public class SmeltingEventListener implements Listener {
      *
      * */
     @EventHandler
-    public void onFurnaceSmelt(FurnaceBurnEvent e) {
+    public void onFurnaceBurn(FurnaceBurnEvent e) {
         Furnace furnace = (Furnace) e.getBlock().getState();
 
         // The config paths are very simple, they'll work for our
@@ -28,7 +29,26 @@ public class SmeltingEventListener implements Listener {
         FurnaceHandler handler = new FurnaceHandler(plugin, furnace);
 
         if (hasSpeedBoost) {
-            handler.setCookTime();
+            new BukkitRunnable() {
+                @Override
+                public void run() {
+                    try {
+                        Furnace updated = (Furnace) e.getBlock().getState();
+                        handler.refreshFurnace(updated);
+
+                        handler.setCookTime();
+
+                        // Furnace is done burning, stop timer until next thing starts burning
+                        if (updated.getBurnTime() == 0) {
+                            cancel();
+                        }
+                    } catch (ClassCastException e) {
+                        // Block either doesn't exist or something else has been placed there
+                        cancel();
+                    }
+
+                }
+            }.runTaskTimer(this.plugin, 0, 20);
         }
 
         if (hasEfficiencyBoost) {

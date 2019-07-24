@@ -30,6 +30,8 @@ class TownyConnector {
 
         mayor = plugin.getServer().getPlayer(town.getMayor().getName());
 
+        if (mayor == null) return false;
+
         return mayor.hasPermission(permission);
     }
 }
