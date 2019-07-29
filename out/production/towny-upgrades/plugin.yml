@@ -2,7 +2,7 @@ name: "TownyUpgrades"
 version: "1"
 author: "Kalob Porter (PorterK)"
 main: "net.kalob.towny.upgrades.Main"
-api-version: "1.14"
+api-version: "1.13"
 permissions:
   towny-upgrades.smelting.speed:
     description: Upgraded smelting speed for towny residents.
